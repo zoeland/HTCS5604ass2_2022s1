@@ -30,6 +30,7 @@ class TestFunctionMethods(unittest.TestCase):
         self.assertFalse(isValidChoice("0"))
         self.assertFalse(isValidChoice("7"))
 
+    # 0 < Name length <= 30
     def test_isValidName(self):
         self.assertTrue(isValidName(get_random_string(1)))
         self.assertTrue(isValidName(get_random_string(30)))
