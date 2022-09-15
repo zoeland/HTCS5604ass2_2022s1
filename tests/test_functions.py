@@ -22,11 +22,13 @@ class TestFunctionMethods(unittest.TestCase):
         self.assertFalse(isAInt('X'))
         self.assertFalse(isAInt('1000X'))
 
-    # Choice: "1" to "6"
+    # Choice: string "1" to "6"
     def test_isValidChoice(self):
         for i in range(1, 7):
             self.assertTrue(isValidChoice(str(i)))
         self.assertFalse(isValidChoice(0))
+        self.assertFalse(isValidChoice(7))
+        self.assertFalse(isValidChoice(1))
         self.assertFalse(isValidChoice("0"))
         self.assertFalse(isValidChoice("7"))
 
